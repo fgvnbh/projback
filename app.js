@@ -66,7 +66,11 @@ app.use('/api/auth', userAuth);
 app.use('/user', userRouter);
 app.use('/', index);
 
-
+// app.get("/",function (req,res) {
+//     //res.sendFile('index.html')
+//     //res.render("index",{user:req.user});
+//     res.send("Mainnnnn ")
+// })
 mongoose.connect("mongodb://localhost:27017/NormalUserDB", { useNewUrlParser: true }, function(err){
     if(err) return console.log(err);
     app.listen(5000, function(){
